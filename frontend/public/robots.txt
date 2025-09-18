@@ -1,0 +1,19 @@
+# robots.txt for My E-commerce Site
+# Learn more: https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Block irrelevant pages (avoid thin/duplicate content)
+Disallow: /user/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /api/
+
+# Optional: prevent faceted/filtered duplicate URLs
+
+Disallow: /*?page=
+
+# Sitemap (very important for SEO)
+Sitemap: https://www.rtecsolutionspvtltd.com/sitemap.xml
