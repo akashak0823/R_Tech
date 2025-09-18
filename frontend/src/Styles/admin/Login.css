@@ -1,0 +1,162 @@
+/* ========== BACKGROUND VIDEO ========== */
+.login-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -3;
+}
+
+/* ========== ADMIN LOGIN CONTAINER ========== */
+.admin-login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #000;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  animation: fadeInPage 1.2s ease forwards;
+}
+
+.admin-login-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+/* ========== LOGIN FORM ========== */
+.admin-login-form {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  padding: 45px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4);
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: slideUpFadeIn 1.1s ease forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.admin-login-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeInLogo 1s ease forwards;
+}
+
+.admin-login-form h2 {
+  font-size: 28px;
+  margin-bottom: 28px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.admin-login-form input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.admin-login-form input:focus {
+  box-shadow: 0 0 0 3px rgba(255, 218, 150, 0.4);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.admin-login-form button {
+  width: 100%;
+  background: #ffda96;
+  color: #000;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 18px rgba(255, 218, 150, 0.35);
+}
+
+.admin-login-form button:hover {
+  background: linear-gradient(to right, #D84040, #722222);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(216, 64, 64, 0.5);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  .admin-login-form {
+    padding: 30px 25px;
+    max-width: 90%;
+  }
+
+  .admin-login-form h2 {
+    font-size: 24px;
+  }
+
+  .admin-login-form input,
+  .admin-login-form button {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .admin-login-logo {
+    width: 80px;
+    margin-bottom: 16px;
+  }
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLogo {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

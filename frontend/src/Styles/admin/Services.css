@@ -1,0 +1,276 @@
+/* ========== SERVICES PAGE ========== */
+.services-page {
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f6fc;
+  min-height: 100vh;
+}
+
+.services-page h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ========== ADD BUTTON ========== */
+.add-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #1fa2ff, #12d8fa, #a6ffcb);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
+}
+
+/* ========== TABLE STYLES ========== */
+.services-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+.services-table th {
+  text-align: left;
+  padding: 12px 16px;
+  background: #2e2e48;
+  color: #fff;
+  font-size: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.services-table td {
+  padding: 14px 16px;
+  background: #fff;
+  border-bottom: 1px solid #e1e1e1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  color: #444;
+}
+
+/* ========== ACTION BUTTONS ========== */
+.services-table td button {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ✏️ Edit Button */
+.services-table td button:first-child {
+  background: #ffc107;
+  color: #000;
+}
+
+.services-table td button:first-child:hover {
+  background: #e0a800;
+}
+
+/* ❌ Delete Button */
+.delete-btn {
+  background: #dc3545;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background: #b02a37;
+}
+/* ========== SERVICES PAGE ========== */
+.services-page {
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f6fc;
+  min-height: 100vh;
+}
+
+.services-page h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ========== ADD BUTTON ========== */
+.add-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #1fa2ff, #12d8fa, #a6ffcb);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
+}
+
+/* ========== TABLE STYLES ========== */
+.services-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+.services-table th {
+  text-align: left;
+  padding: 12px 16px;
+  background: #2e2e48;
+  color: #fff;
+  font-size: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.services-table td {
+  padding: 14px 16px;
+  background: #fff;
+  border-bottom: 1px solid #e1e1e1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  color: #444;
+}
+
+/* ========== ACTION BUTTONS ========== */
+.action-btns {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btns button {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.action-btns button:first-child {
+  background: #ffc107;
+  color: #000;
+}
+
+.action-btns button:first-child:hover {
+  background: #e0a800;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background: #b02a37;
+}
+
+/* ========== 📱 MOBILE CARD STYLE ========== */
+@media (max-width: 768px) {
+  .services-table thead {
+    display: none;
+  }
+
+  .services-table,
+  .services-table tbody,
+  .services-table tr,
+  .services-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .services-table tr {
+    margin-bottom: 18px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 15px;
+    position: relative;
+  }
+
+  /* Media at top */
+  .services-table td[data-label="Media"],
+  .services-table td[data-label="Icon"] {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  .services-table td[data-label="Media"] img,
+  .services-table td[data-label="Icon"] img,
+  .services-table td[data-label="Media"] video {
+    width: 90px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  .services-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 6px 0;
+    font-size: 14px;
+    border: none;
+    box-shadow: none;
+    flex-wrap: wrap;
+  }
+
+  .services-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #333;
+    flex-basis: 35%;
+    text-align: left;
+  }
+
+  .services-table td[data-label="Media"]::before,
+  .services-table td[data-label="Icon"]::before {
+    content: "";
+  }
+
+  .services-table td[data-label="Title"],
+  .services-table td[data-label="Category"],
+  .services-table td[data-label="Slug"],
+  .services-table td[data-label="Key Features"] {
+    margin-bottom: 8px;
+  }
+
+  .services-table td[data-label="Actions"] {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    justify-content: stretch;
+  }
+
+  .services-table td[data-label="Actions"] button {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+}

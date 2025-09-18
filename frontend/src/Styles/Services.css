@@ -1,0 +1,105 @@
+.services-section {
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #f4f4f4, #ffffff);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+.services-header h4 {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.services-header h2 {
+  font-size: 40px;
+  font-weight: 700;
+  background: linear-gradient(to right, #D84040, #A31D1D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+}
+
+.services-subtitle {
+  font-size: 16px;
+  color: #555;
+  max-width: 620px;
+  margin: 0 auto 40px;
+  line-height: 1.5;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+  border: 1px solid #eee;
+  text-align: left;
+  transition: transform 0.3s ease;
+  perspective: 800px;
+}
+
+.service-icon {
+  width: 150px;       /* Increase width */
+  height: 150px;      /* Increase height */
+  margin-bottom: 20px;
+  /* Remove font-size & color as those don't apply to videos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-icon video {
+  width: 100%;        /* Make video fill the icon container */
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px; /* Optional: keep border radius */
+}
+
+
+.service-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+/* Learn More Button Styles */
+.learn-more-btn {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.learn-more-button {
+  background-color: transparent;
+  border: 2px solid #D84040;
+  color: #D84040;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.learn-more-button:hover {
+  background-color: #D84040;
+  color: #fff;
+}

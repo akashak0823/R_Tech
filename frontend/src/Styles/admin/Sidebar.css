@@ -1,0 +1,135 @@
+.admin-sidebar {
+  width: 220px;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+  color: white;
+  height: 100vh;
+  padding: 20px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  transition: transform 0.3s ease-in-out; /* smooth slide */
+  z-index: 1000;
+}
+
+/* ===== Logo Section ===== */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-logo img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-logo span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ===== Nav Section ===== */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 14px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.sidebar-nav a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(4px);
+}
+
+.sidebar-nav a.active {
+  background: linear-gradient(90deg, #ffda96, #fcb045);
+  color: #1e1e2f;
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(255, 218, 150, 0.4);
+}
+
+/* Optional Font Awesome icons (if used) */
+.sidebar-nav i {
+  width: 20px;
+  text-align: center;
+}
+
+/* ===== Layout ===== */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f6fc;
+}
+
+.admin-main {
+  flex: 1;
+  padding: 30px 40px;
+}
+
+/* ===== Mobile Behavior ===== */
+.sidebar-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: #1e1e2f;
+  color: white;
+  border: none;
+  font-size: 22px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1100;
+  display: none; /* only visible on mobile */
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .admin-sidebar {
+    transform: translateX(-100%); /* hidden by default */
+  }
+
+  .admin-sidebar.open {
+    transform: translateX(0); /* slide in */
+  }
+
+  .sidebar-toggle {
+    display: block;
+  }
+
+  .overlay {
+    display: block;
+  }
+
+  /* main content takes full width on mobile */
+  .admin-main {
+    padding: 20px;
+  }
+}
