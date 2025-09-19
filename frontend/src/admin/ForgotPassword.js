@@ -15,7 +15,7 @@ const ForgotPassword = () => {
     setLoading(true);
 
     try {
-      await axios.post("https://www.rtecsolutionspvtltd.com/api/admin/forgot-password", { email });
+      await axios.post("https://rtecsolutionspvtltd.com/api//admin/forgot-password", { email });
       toast.success("✅ Reset link sent to your email!", {
         position: "top-center",
         autoClose: 2000,
