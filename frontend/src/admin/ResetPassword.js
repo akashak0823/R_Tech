@@ -21,7 +21,7 @@ const ResetPassword = () => {
 
     setLoading(true);
     try {
-      await axios.post(`http://localhost:5000/api/admin/reset-password/${token}`, {
+      await axios.post(`http://31.97.60.209:5000/api/admin/reset-password/${token}`, {
         password: form.password,
       });
       toast.success("✅ Password reset successful!", {
