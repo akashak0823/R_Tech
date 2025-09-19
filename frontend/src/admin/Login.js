@@ -19,7 +19,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("https://www.rtecsolutionspvtltd.com/api/admin/login", form);
+      const res = await axios.post("https://rtecsolutionspvtltd.com/api//admin/login", form);
 
       // save token in localStorage
       localStorage.setItem("adminToken", res.data.token);
