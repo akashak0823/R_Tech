@@ -27,10 +27,10 @@ const Dashboard = () => {
   const fetchData = async () => {
     try {
       const [productsRes, servicesRes, usersRes, testimonialsRes] = await Promise.all([
-        axios.get("https://www.rtecsolutionspvtltd.com/api/products"),
-        axios.get("https://www.rtecsolutionspvtltd.com/api/services"),
-        axios.get("https://www.rtecsolutionspvtltd.com/api/users"),
-        axios.get("https://www.rtecsolutionspvtltd.com/api/testimonials"),
+        axios.get("https://rtecsolutionspvtltd.com/api//products"),
+        axios.get("https://rtecsolutionspvtltd.com/api//services"),
+        axios.get("https://rtecsolutionspvtltd.com/api//users"),
+        axios.get("https://rtecsolutionspvtltd.com/api//testimonials"),
       ]);
 
       setProducts(productsRes.data);
