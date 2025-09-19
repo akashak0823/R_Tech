@@ -17,7 +17,7 @@ const AdminTestimonials = () => {
 
   const fetchTestimonials = async () => {
     try {
-      const res = await axios.get("https://www.rtecsolutionspvtltd.com/api/testimonials");
+      const res = await axios.get("https://rtecsolutionspvtltd.com/api//testimonials");
       setTestimonials(res.data);
     } catch (err) {
       toast.error("Failed to fetch testimonials");
@@ -31,7 +31,7 @@ const AdminTestimonials = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://www.rtecsolutionspvtltd.com/api/testimonials/${id}`);
+      await axios.delete(`https://rtecsolutionspvtltd.com/api//testimonials/${id}`);
       setTestimonials((prev) => prev.filter((t) => t._id !== id));
       toast.success("Testimonial deleted successfully");
     } catch (err) {
@@ -56,7 +56,7 @@ const AdminTestimonials = () => {
       let res;
       if (form._id) {
         res = await axios.put(
-          `https://www.rtecsolutionspvtltd.com/api/testimonials/${form._id}`,
+          `https://rtecsolutionspvtltd.com/api//testimonials/${form._id}`,
           data,
           { headers: { "Content-Type": "multipart/form-data" } }
         );
@@ -65,7 +65,7 @@ const AdminTestimonials = () => {
         );
         toast.success("Testimonial updated successfully");
       } else {
-        res = await axios.post("https://www.rtecsolutionspvtltd.com/api/testimonials", data, {
+        res = await axios.post("https://rtecsolutionspvtltd.com/api//testimonials", data, {
           headers: { "Content-Type": "multipart/form-data" },
         });
         setTestimonials((prev) => [...prev, res.data]);
