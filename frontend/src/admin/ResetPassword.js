@@ -21,7 +21,7 @@ const ResetPassword = () => {
 
     setLoading(true);
     try {
-      await axios.post(`https://www.rtecsolutionspvtltd.com/api/admin/reset-password/${token}`, {
+      await axios.post(`https://rtecsolutionspvtltd.com/api//admin/reset-password/${token}`, {
         password: form.password,
       });
       toast.success("✅ Password reset successful!", {
