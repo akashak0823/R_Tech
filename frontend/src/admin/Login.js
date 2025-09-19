@@ -19,7 +19,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/admin/login", form);
+      const res = await axios.post("http://31.97.60.209:5000/api/admin/login", form);
 
       // save token in localStorage
       localStorage.setItem("adminToken", res.data.token);
