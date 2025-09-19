@@ -11,7 +11,7 @@ const Testimonial = () => {
 
   useEffect(() => {
     axios
-      .get("http://31.97.60.209:5000/api/testimonials")
+      .get("https://www.rtecsolutionspvtltd.com/api/testimonials")
       .then((res) => {
         setTestimonials(res.data);
         setLoading(false);
