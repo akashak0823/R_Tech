@@ -18,7 +18,7 @@ const ProductDetails = () => {
     const loadProduct = async () => {
       try {
         const { data } = await axios.get(
-          `http://31.97.60.209:5000/api/products/slug/${slug}`
+          `https://www.rtecsolutionspvtltd.com/api/products/slug/${slug}`
         );
         setProduct(data);
 
