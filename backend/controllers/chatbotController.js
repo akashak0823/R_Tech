@@ -7,19 +7,19 @@ exports.handleChat = async (req, res) => {
 
   try {
     if (/service/i.test(message)) {
-      const { data } = await axios.get("http://31.97.60.209:5000/api/chatbot/services");
+      const { data } = await axios.get("https://www.rtecsolutionspvtltd.com/api/chatbot/services");
       responseText = "Here are our services:\n" + data.map(s => `- ${s.title}`).join("\n");
     }
     else if (/product/i.test(message)) {
-      const { data } = await axios.get("http://31.97.60.209:5000/api/chatbot/products");
+      const { data } = await axios.get("https://www.rtecsolutionspvtltd.com/api/chatbot/products");
       responseText = "Our products include:\n" + data.map(p => `- ${p.name}`).join("\n");
     }
     else if (/about|company/i.test(message)) {
-      const { data } = await axios.get("http://31.97.60.209:5000/api/chatbot/company");
+      const { data } = await axios.get("https://www.rtecsolutionspvtltd.com/api/chatbot/company");
       responseText = data?.description || "No company details available.";
     }
     else if (/testimonial/i.test(message)) {
-      const { data } = await axios.get("http://31.97.60.209:5000/api/chatbot/testimonials");
+      const { data } = await axios.get("https://www.rtecsolutionspvtltd.com/api/chatbot/testimonials");
       responseText = "Here's what our clients say:\n" + data.map(t => `- "${t.message}"`).join("\n");
     }
     else {
