@@ -18,7 +18,7 @@ const Services = () => {
 
   const fetchServices = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/services");
+      const res = await axios.get("http://31.97.60.209:5000/api/services");
       setServices(res.data);
     } catch (err) {
       console.error("Failed to fetch services:", err);
@@ -38,7 +38,7 @@ const Services = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/services/${id}`);
+      await axios.delete(`http://31.97.60.209:5000/api/services/${id}`);
       setServices((prev) => prev.filter((s) => s._id !== id));
       toast.success("Service deleted successfully.");
     } catch (err) {
@@ -72,7 +72,7 @@ const Services = () => {
       let res;
       if (editingService) {
         res = await axios.put(
-          `http://localhost:5000/api/services/${editingService._id}`,
+          `http://31.97.60.209:5000/api/services/${editingService._id}`,
           formData,
           { headers: { "Content-Type": "multipart/form-data" } }
         );
@@ -81,7 +81,7 @@ const Services = () => {
         );
         toast.success("Service updated successfully.");
       } else {
-        res = await axios.post("http://localhost:5000/api/services", formData, {
+        res = await axios.post("http://31.97.60.209:5000/api/services", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
         setServices((prev) => [...prev, res.data]);
