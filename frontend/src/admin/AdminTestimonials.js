@@ -17,7 +17,7 @@ const AdminTestimonials = () => {
 
   const fetchTestimonials = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/testimonials");
+      const res = await axios.get("http://31.97.60.209:5000/api/testimonials");
       setTestimonials(res.data);
     } catch (err) {
       toast.error("Failed to fetch testimonials");
@@ -31,7 +31,7 @@ const AdminTestimonials = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/testimonials/${id}`);
+      await axios.delete(`http://31.97.60.209:5000/api/testimonials/${id}`);
       setTestimonials((prev) => prev.filter((t) => t._id !== id));
       toast.success("Testimonial deleted successfully");
     } catch (err) {
@@ -56,7 +56,7 @@ const AdminTestimonials = () => {
       let res;
       if (form._id) {
         res = await axios.put(
-          `http://localhost:5000/api/testimonials/${form._id}`,
+          `http://31.97.60.209:5000/api/testimonials/${form._id}`,
           data,
           { headers: { "Content-Type": "multipart/form-data" } }
         );
@@ -65,7 +65,7 @@ const AdminTestimonials = () => {
         );
         toast.success("Testimonial updated successfully");
       } else {
-        res = await axios.post("http://localhost:5000/api/testimonials", data, {
+        res = await axios.post("http://31.97.60.209:5000/api/testimonials", data, {
           headers: { "Content-Type": "multipart/form-data" },
         });
         setTestimonials((prev) => [...prev, res.data]);
