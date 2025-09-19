@@ -13,10 +13,10 @@ const Footer = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const servicesRes = await axios.get("http://31.97.60.209:5000/api/services");
+        const servicesRes = await axios.get("https://www.rtecsolutionspvtltd.com/api/services");
         setServices(servicesRes.data);
 
-        const productsRes = await axios.get("http://31.97.60.209:5000/api/products");
+        const productsRes = await axios.get("https://www.rtecsolutionspvtltd.com/api/products");
         const grouped = productsRes.data.reduce((acc, product) => {
           const { category } = product;
           if (!acc[category]) acc[category] = [];
