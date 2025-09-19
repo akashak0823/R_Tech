@@ -18,7 +18,7 @@ const ProductDetails = () => {
     const loadProduct = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:5000/api/products/slug/${slug}`
+          `http://31.97.60.209:5000/api/products/slug/${slug}`
         );
         setProduct(data);
 
