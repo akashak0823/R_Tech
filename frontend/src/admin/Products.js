@@ -19,7 +19,7 @@ const Products = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://31.97.60.209:5000/api/products");
+      const res = await axios.get("https://www.rtecsolutionspvtltd.com/api/products");
       setProducts(res.data);
     } catch (err) {
       console.error("Failed to fetch products:", err);
@@ -48,7 +48,7 @@ const Products = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://31.97.60.209:5000/api/products/${id}`);
+      await axios.delete(`https://www.rtecsolutionspvtltd.com/api/products/${id}`);
       setProducts((prev) => prev.filter((p) => p._id !== id));
       toast.success("Product deleted successfully");
     } catch (err) {
@@ -92,7 +92,7 @@ const Products = () => {
       if (form._id) {
         // Editing
         res = await axios.put(
-          `http://31.97.60.209:5000/api/products/${form._id}`,
+          `https://www.rtecsolutionspvtltd.com/api/products/${form._id}`,
           data,
           { headers: { "Content-Type": "multipart/form-data" } }
         );
@@ -102,7 +102,7 @@ const Products = () => {
         toast.success("Product updated successfully");
       } else {
         // Adding
-        res = await axios.post("http://31.97.60.209:5000/api/products", data, {
+        res = await axios.post("https://www.rtecsolutionspvtltd.com/api/products", data, {
           headers: { "Content-Type": "multipart/form-data" },
         });
         setProducts((prev) => [...prev, res.data]);
