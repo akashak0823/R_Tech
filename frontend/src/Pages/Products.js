@@ -20,7 +20,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://31.97.60.209:5000/api/products");
+        const res = await axios.get("https://www.rtecsolutionspvtltd.com/api/products");
         setProductsData(res.data);
       } catch (error) {
         console.error("Failed to fetch products:", error);
