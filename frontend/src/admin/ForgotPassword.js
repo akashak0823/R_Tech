@@ -15,7 +15,7 @@ const ForgotPassword = () => {
     setLoading(true);
 
     try {
-      await axios.post("http://localhost:5000/api/admin/forgot-password", { email });
+      await axios.post("http://31.97.60.209:5000/api/admin/forgot-password", { email });
       toast.success("✅ Reset link sent to your email!", {
         position: "top-center",
         autoClose: 2000,
