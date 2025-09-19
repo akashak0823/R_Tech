@@ -18,7 +18,7 @@ const Services = () => {
 
   const fetchServices = async () => {
     try {
-      const res = await axios.get("https://www.rtecsolutionspvtltd.com/api/services");
+      const res = await axios.get("https://rtecsolutionspvtltd.com/api//services");
       setServices(res.data);
     } catch (err) {
       console.error("Failed to fetch services:", err);
@@ -38,7 +38,7 @@ const Services = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://www.rtecsolutionspvtltd.com/api/services/${id}`);
+      await axios.delete(`https://rtecsolutionspvtltd.com/api//services/${id}`);
       setServices((prev) => prev.filter((s) => s._id !== id));
       toast.success("Service deleted successfully.");
     } catch (err) {
@@ -72,7 +72,7 @@ const Services = () => {
       let res;
       if (editingService) {
         res = await axios.put(
-          `https://www.rtecsolutionspvtltd.com/api/services/${editingService._id}`,
+          `https://rtecsolutionspvtltd.com/api//services/${editingService._id}`,
           formData,
           { headers: { "Content-Type": "multipart/form-data" } }
         );
@@ -81,7 +81,7 @@ const Services = () => {
         );
         toast.success("Service updated successfully.");
       } else {
-        res = await axios.post("https://www.rtecsolutionspvtltd.com/api/services", formData, {
+        res = await axios.post("https://rtecsolutionspvtltd.com/api//services", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
         setServices((prev) => [...prev, res.data]);
