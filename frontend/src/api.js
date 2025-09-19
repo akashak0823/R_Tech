@@ -4,7 +4,7 @@ import axios from "axios";
 // Prefer environment override, otherwise use relative "/api" so it works with
 // CRA dev proxy and same-origin production deployments.
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "http://localhost:5000/api",
+  baseURL: process.env.REACT_APP_API_URL || "http://31.97.60.209:5000/api",
 });
 
 ////////////////////////
