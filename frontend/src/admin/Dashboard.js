@@ -27,10 +27,10 @@ const Dashboard = () => {
   const fetchData = async () => {
     try {
       const [productsRes, servicesRes, usersRes, testimonialsRes] = await Promise.all([
-        axios.get("http://localhost:5000/api/products"),
-        axios.get("http://localhost:5000/api/services"),
-        axios.get("http://localhost:5000/api/users"),
-        axios.get("http://localhost:5000/api/testimonials"),
+        axios.get("http://31.97.60.209:5000/api/products"),
+        axios.get("http://31.97.60.209:5000/api/services"),
+        axios.get("http://31.97.60.209:5000/api/users"),
+        axios.get("http://31.97.60.209:5000/api/testimonials"),
       ]);
 
       setProducts(productsRes.data);
