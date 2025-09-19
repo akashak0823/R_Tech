@@ -25,7 +25,7 @@ const ContactUs = () => {
     setStatusMessage("");
 
     try {
-      await axios.post("https://www.rtecsolutionspvtltd.com/api/contact", formData);
+      await axios.post("https://rtecsolutionspvtltd.com/api//contact", formData);
       setStatusMessage("✅ Thank you! We will contact you soon.");
       setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
     } catch (error) {
