@@ -25,7 +25,7 @@ const ContactUs = () => {
     setStatusMessage("");
 
     try {
-      await axios.post("http://localhost:5000/api/contact", formData);
+      await axios.post("http://31.97.60.209:5000/api/contact", formData);
       setStatusMessage("✅ Thank you! We will contact you soon.");
       setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
     } catch (error) {
